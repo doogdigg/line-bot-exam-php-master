@@ -23,9 +23,14 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("ชื่อ : ".$name."\nเบอร์โทร : ".$mobile);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+//echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
-
+function goback()
+{
+    header("Location: {$_SERVER['HTTP_REFERER']}");
+    exit;
+}
+goback();
 
 
 
