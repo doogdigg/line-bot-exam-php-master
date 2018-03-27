@@ -3,7 +3,11 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
+<<<<<<< HEAD
 $access_token ='YSwPWOmQZUB14QF6JAhdODRHiMs4Z0zotyIB4GlEokSYN9PTjc/n4xEFqaf7rdQcGxH26Kv0iML+c9zf8NPC1w4aS4bYzHVDLz26NqTZbTFFmj6HTbKnGKHn5/SBjo1N5VCe/0tXvSYlvHBT10mJOwdB04t89/1O/w1cDnyilFU=';
+=======
+$access_token = 'YSwPWOmQZUB14QF6JAhdODRHiMs4Z0zotyIB4GlEokSYN9PTjc/n4xEFqaf7rdQcGxH26Kv0iML+c9zf8NPC1w4aS4bYzHVDLz26NqTZbTFFmj6HTbKnGKHn5/SBjo1N5VCe/0tXvSYlvHBT10mJOwdB04t89/1O/w1cDnyilFU=';
+>>>>>>> fddb37494a313df48143fc2c39ad6409945c7734
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -16,7 +20,8 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $event['source']['userId'];
+			//$text = $event['source']['userId'];
+			$text = $event['source']['groupId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
