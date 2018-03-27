@@ -20,7 +20,7 @@ $pushID = 'C4771fc3fc0b657a4d44933a1ba6fdd92';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("ชื่อ : ".$name."\n เบอร์โทร : ".$mobile);
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("ชื่อ : ".$name."_\n_เบอร์โทร : ".$mobile);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
