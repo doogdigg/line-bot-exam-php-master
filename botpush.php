@@ -1,5 +1,12 @@
 <?php
 
+$name = $_GET['name'];
+$mobile = $_GET['mobile'];
+$email = $_GET['email'];
+$line = $_GET['line'];
+$accname = $_GET['accname'];
+$accno = $_GET['accno'];
+$bank = $_GET['bank'];
 
 
 require "vendor/autoload.php";
@@ -13,7 +20,7 @@ $pushID = 'C4771fc3fc0b657a4d44933a1ba6fdd92';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('ชื่อ : '.$name.'\n เบอร์โทร : '.$mobile);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
