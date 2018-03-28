@@ -20,7 +20,7 @@ $pushID = 'C4771fc3fc0b657a4d44933a1ba6fdd92';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("สมัครสมาชิกใหม่\nชื่อ : ".$name."\nเบอร์โทร : ".$mobile."\nemail : ".$email."\nLineID : ".$line."\nชื่อบัญชี : ".$accname."\nเลขที่บัญชี : ".$accno."\nธนาคาร : ".$bank);
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("SBOBET\nสมัครสมาชิก\nชื่อ : ".$name."\nเบอร์โทร : ".$mobile."\nemail : ".$email."\nLineID : ".$line."\nชื่อบัญชี : ".$accname."\nเลขที่บัญชี : ".$accno."\nธนาคาร : ".$bank);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 //echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
