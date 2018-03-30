@@ -31,7 +31,7 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
 
 if($type == 'deposit'){
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("SBOBET\nฝากเงิน\nUsername : ".$username."\nธนาคารที่ใช้โอน : ".$bank."\nชื่อบัญชี : ".$accname."\nเลขที่บัญชี : ".$accno."\nจำนวนเงินที่ฝาก : ".$amount."\nธนาคารที่โอนเข้า : ".$bankto."\nเลขที่บัญชีที่โอนเข้า: : ".$accnoto."\nวันที่โอน : ".$date."\nเวลาโอน : ".$time."\nช่องทางการโอน :".$tway);}
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("SBOBET\nฝากเงิน\nUsername : ".$username."\nธนาคารที่ใช้โอน : ".$bank."\nชื่อบัญชี : ".$accname."\nเลขที่บัญชี : ".$accno."\nจำนวนเงินที่ฝาก : ".$amount."\nธนาคารที่โอนเข้า : ".$bankto."\nเลขที่บัญชีที่โอนเข้า:  ".$accnoto."\nวันที่โอน : ".$date."\nเวลาโอน : ".$time."\nช่องทางการโอน :".$tway);}
 
 if(empty($type)){
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("SBOBET\nสมัครสมาชิก\nชื่อ : ".$name."\nเบอร์โทร : ".$mobile."\nemail : ".$email."\nLineID : ".$line."\nชื่อบัญชี : ".$accname."\nเลขที่บัญชี : ".$accno."\nธนาคาร : ".$bank);}
