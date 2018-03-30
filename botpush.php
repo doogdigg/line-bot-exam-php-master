@@ -46,7 +46,7 @@ $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 function goback()
 {
-    header("Location: {$_SERVER['HTTP_REFERER']}?success='1'");
+    header("Location: {$_SERVER['HTTP_REFERER']}?success=1");
     exit;
 }
 goback();
